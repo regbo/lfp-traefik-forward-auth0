@@ -27,3 +27,10 @@
 /nbdist/
 /.nb-gradle/
 /venv/
+
+### LFP ###
+LOG_FILE_IS_UNDEFINED
+/logs/
+/temp/
+.flattened-pom.xml
+.factorypath
