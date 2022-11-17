@@ -1,6 +1,5 @@
-package com.lfp.traefik.tfa.auth0;
+package dniel.forwardauth;
 
-import dniel.forwardauth.AuthProperties;
 import io.swagger.v3.oas.annotations.enums.SecuritySchemeIn;
 import io.swagger.v3.oas.annotations.enums.SecuritySchemeType;
 import io.swagger.v3.oas.annotations.security.SecurityScheme;
@@ -16,7 +15,7 @@ public class AuthApplication {
 
 
     public static void main(String[] args) {
-        SpringApplication.run(AuthApplication.class, args);
+        SpringApplication.run(new Class<?>[]{AuthApplication.class}, args);
     }
 
 

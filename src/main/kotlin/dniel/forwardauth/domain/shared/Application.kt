@@ -17,13 +17,13 @@ class Application {
     var scope: String = "profile openid email"
     var redirectUri: String = ""
     var tokenCookieDomain: String = ""
-    var restrictedMethods: Array<String> = arrayOf("DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT")
-    var requiredPermissions: Array<String> = emptyArray()
-    var claims: Array<String> = emptyArray()
     var returnTo: String = ""
-
+    var restrictedMethods: List<String> = listOf("DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT")
+    var requiredPermissions: List<String> = emptyList()
+    var claims: List<String> = emptyList()
     override fun toString(): String {
-        return "Application(name='$name', clientId='$clientId', clientSecret='$clientSecret', audience='$audience', scope='$scope', redirectUri='$redirectUri', tokenCookieDomain='$tokenCookieDomain', restrictedMethods=${Arrays.toString(restrictedMethods)}, requiredPermissions=${Arrays.toString(requiredPermissions)}, claims=${Arrays.toString(claims)})"
+        return "Application(name='$name', audience='$audience', scope='$scope', redirectUri='$redirectUri', tokenCookieDomain='$tokenCookieDomain', returnTo='$returnTo', restrictedMethods=$restrictedMethods, requiredPermissions=$requiredPermissions, claims=$claims)"
     }
+
 
 }

@@ -114,9 +114,9 @@ class Authorizer private constructor(private val accessToken: Token,
                 lastError = Error("Missing permissions claim in access token. In Auth0, Add Permissions in the Access Token.")
                 fsm.post(AuthorizerStateMachine.Event.INVALID_PERMISSIONS)
             }
-            jwtAccessToken.hasPermission(app.requiredPermissions) -> fsm.post(AuthorizerStateMachine.Event.VALID_PERMISSIONS)
+            jwtAccessToken.hasPermission(app.requiredPermissions.toTypedArray()) -> fsm.post(AuthorizerStateMachine.Event.VALID_PERMISSIONS)
             else -> {
-                val missingPermissions = jwtAccessToken.missingPermissions(app.requiredPermissions)
+                val missingPermissions = jwtAccessToken.missingPermissions(app.requiredPermissions.toTypedArray())
                 lastError = Error("Missing permissions '${missingPermissions.joinToString()}'")
                 fsm.post(AuthorizerStateMachine.Event.INVALID_PERMISSIONS)
             }
