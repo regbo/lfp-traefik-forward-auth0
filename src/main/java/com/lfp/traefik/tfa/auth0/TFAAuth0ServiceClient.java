@@ -1,4 +1,4 @@
-package dniel.forwardauth;
+package com.lfp.traefik.tfa.auth0;
 
 import com.github.throwable.beanref.BeanPath;
 import com.github.throwable.beanref.BeanRef;
@@ -14,6 +14,7 @@ import com.lfp.traefik.impl.grpc.tfa.auth0.ApplicationRequest;
 import com.lfp.traefik.impl.grpc.tfa.auth0.Context;
 import com.lfp.traefik.impl.grpc.tfa.auth0.ReactorTFAAuth0ServiceGrpc;
 import com.lfp.traefik.impl.grpc.tfa.config.TFAAuthServiceConfig;
+import dniel.forwardauth.AuthProperties;
 import io.grpc.ManagedChannel;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;

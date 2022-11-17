@@ -1,5 +1,6 @@
-package dniel.forwardauth;
+package com.lfp.traefik.tfa.auth0;
 
+import dniel.forwardauth.AuthProperties;
 import io.swagger.v3.oas.annotations.enums.SecuritySchemeIn;
 import io.swagger.v3.oas.annotations.enums.SecuritySchemeType;
 import io.swagger.v3.oas.annotations.security.SecurityScheme;
